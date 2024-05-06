@@ -10,7 +10,9 @@ for educational and research purposes.
 
 ## TODO
 
-- Add _SpO2 Assistant_, _cardian_ and _Sounds_Hz_.
+- Add _SpO2 Assistant_ and _cardian_.
+- Sync icons and layout with computer class.
+- Restore original structure of DOS programs.
 - Add checks for _electronic_atlas_ and _modern_physiol_lectures_.
 - Add local uninstaller.
 - Split _normphysadmin.nsi_.
