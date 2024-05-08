@@ -30,4 +30,8 @@
 !define TWITCH_VERSION 1
 !define TWITCH_UI_NAME "03_TWITCH"
 
+!define PRAT
+!define PRAT_VERSION 1
+!define PRAT_UI_NAME "04_PRAT"
+
 !endif
