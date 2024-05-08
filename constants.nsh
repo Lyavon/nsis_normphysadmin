@@ -22,4 +22,8 @@
 !define PHYSIOL2_VERSION 1
 !define PHYSIOL2_UI_NAME "01_PHYSIOL2"
 
+!define NMJ
+!define NMJ_VERSION 1
+!define NMJ_UI_NAME "02_NMJ"
+
 !endif
