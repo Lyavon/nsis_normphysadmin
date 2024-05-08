@@ -19,7 +19,7 @@ Function TWITCH_INSTALL
   StrCpy $R0 "TWITCH"
   StrCpy $R1 "installed"
   Call setRegStatus
-  StrCpy $R1 ${TWITCH_VERSION}
+  StrCpy $R1 "1"
   Call setRegVersion
   Pop $R1
   Pop $R0

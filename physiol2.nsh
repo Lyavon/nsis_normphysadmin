@@ -19,7 +19,7 @@ Function PHYSIOL2_INSTALL
   StrCpy $R0 "PHYSIOL2"
   StrCpy $R1 "installed"
   Call setRegStatus
-  StrCpy $R1 ${PHYSIOL2_VERSION}
+  StrCpy $R1 "1"
   Call setRegVersion
   Pop $R1
   Pop $R0

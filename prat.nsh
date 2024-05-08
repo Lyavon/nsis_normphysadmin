@@ -19,7 +19,7 @@ Function PRAT_INSTALL
   StrCpy $R0 "PRAT"
   StrCpy $R1 "installed"
   Call setRegStatus
-  StrCpy $R1 ${PRAT_VERSION}
+  StrCpy $R1 "1"
   Call setRegVersion
   Pop $R1
   Pop $R0
