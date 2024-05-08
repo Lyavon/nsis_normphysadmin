@@ -46,6 +46,9 @@
 !define Physiology_VERSION 1
 !define Physiology_UI_NAME "09_Physiology"
 
+!define BreathCycle
+!define BreathCycle_VERSION 1
+
 
 !define FINK
 !define FINK_VERSION 1
