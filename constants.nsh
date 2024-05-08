@@ -58,6 +58,9 @@
 !define LUSHER
 !define LUSHER_VERSION 1
 
+!define DEPARTMENT
+!define DEPARTMENT_VERSION 1
+
 
 !define BPRAT
 !define BPRAT_VERSION 1
