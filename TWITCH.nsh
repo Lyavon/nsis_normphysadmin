@@ -10,8 +10,8 @@ Function TWITCH_INSTALL
   File /r "${SOURCE_PATH}\\TWITCH\"
   CreateShortcut \
       "$DESKTOP\\03_TWITCH.lnk" \
-      "$OUTDIR\\run.bat" \
-      "" \
+      "$OUTDIR\\TWITCH_START.exe" \
+      "-fullscreen" \
       "$OUTDIR\\twitch1.ico"
 
   Push $R0
@@ -34,8 +34,13 @@ Function ${un}TWITCH_REMOVE
   Call ${un}regVersion
   Pop $R1
   ${If} $R1 == "1"
+    StrCpy $R0 "TWITCH_START.exe"
+    Call ${un}killProcess
+
     RMDIR /r "${ADMIN_PATH}\\TWITCH"
     Delete "$DESKTOP\\03_TWITCH.lnk"
+
+    StrCpy $R0 "TWITCH"
     Call ${un}regDelete
   ${Else}
     !insertmacro notifyOfUnknownVersion "TWITCH" $R1

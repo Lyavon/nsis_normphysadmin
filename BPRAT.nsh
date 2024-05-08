@@ -10,8 +10,8 @@ Function BPRAT_INSTALL
   File /r "${SOURCE_PATH}\\BPRAT\"
   CreateShortcut \
       "$DESKTOP\\BPRAT.lnk" \
-      "$OUTDIR\\run.bat" \
-      "" \
+      "$OUTDIR\\BPRAT_START.exe" \
+      "-fullscreen" \
       ""
 
   Push $R0
@@ -34,8 +34,13 @@ Function ${un}BPRAT_REMOVE
   Call ${un}regVersion
   Pop $R1
   ${If} $R1 == "1"
+    StrCpy $R0 "BPRAT_START.exe"
+    Call ${un}killProcess
+
     RMDIR /r "${ADMIN_PATH}\\BPRAT"
     Delete "$DESKTOP\\BPRAT.lnk"
+
+    StrCpy $R0 "BPRAT"
     Call ${un}regDelete
   ${Else}
     !insertmacro notifyOfUnknownVersion "BPRAT" $R1

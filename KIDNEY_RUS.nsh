@@ -10,8 +10,8 @@ Function KIDNEY_RUS_INSTALL
   File /r "${SOURCE_PATH}\\KIDNEY_RUS\"
   CreateShortcut \
       "$DESKTOP\\${KIDNEY_RUS_LINK_NAME_1}.lnk" \
-      "$OUTDIR\\run.bat" \
-      "" \
+      "$OUTDIR\\KIDNEY_RUS_START.exe" \
+      "-fullscreen" \
       "$OUTDIR\\Kidney.ico"
 
   Push $R0
@@ -34,8 +34,13 @@ Function ${un}KIDNEY_RUS_REMOVE
   Call ${un}regVersion
   Pop $R1
   ${If} $R1 == "1"
+    StrCpy $R0 "KIDNEY_RUS_START.exe"
+    Call ${un}killProcess
+
     RMDIR /r "${ADMIN_PATH}\\KIDNEY_RUS"
     Delete "$DESKTOP\\${KIDNEY_RUS_LINK_NAME_1}.lnk"
+
+    StrCpy $R0 "KIDNEY_RUS"
     Call ${un}regDelete
   ${Else}
     !insertmacro notifyOfUnknownVersion "KIDNEY_RUS" $R1

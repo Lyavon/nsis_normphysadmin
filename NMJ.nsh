@@ -10,8 +10,8 @@ Function NMJ_INSTALL
   File /r "${SOURCE_PATH}\\NMJ\"
   CreateShortcut \
       "$DESKTOP\\02_NMJ.lnk" \
-      "$OUTDIR\\run.bat" \
-      "" \
+      "$OUTDIR\\NMJ_START.exe" \
+      "-fullscreen" \
       "$OUTDIR\\Nerve2.ico"
 
   Push $R0
@@ -34,8 +34,13 @@ Function ${un}NMJ_REMOVE
   Call ${un}regVersion
   Pop $R1
   ${If} $R1 == "1"
+    StrCpy $R0 "NMJ_START.exe"
+    Call ${un}killProcess
+
     RMDIR /r "${ADMIN_PATH}\\NMJ"
     Delete "$DESKTOP\\02_NMJ.lnk"
+
+    StrCpy $R0 "NMJ"
     Call ${un}regDelete
   ${Else}
     !insertmacro notifyOfUnknownVersion "NMJ" $R1

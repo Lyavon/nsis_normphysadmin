@@ -10,8 +10,8 @@ Function PRAT_INSTALL
   File /r "${SOURCE_PATH}\\PRAT\"
   CreateShortcut \
       "$DESKTOP\\04_PRAT.lnk" \
-      "$OUTDIR\\run.bat" \
-      "" \
+      "$OUTDIR\\PRAT_START.exe" \
+      "-fullscreen" \
       "$OUTDIR\\BP.ico"
 
   Push $R0
@@ -34,8 +34,13 @@ Function ${un}PRAT_REMOVE
   Call ${un}regVersion
   Pop $R1
   ${If} $R1 == "1"
+    StrCpy $R0 "PRAT_START.exe"
+    Call ${un}killProcess
+
     RMDIR /r "${ADMIN_PATH}\\PRAT"
     Delete "$DESKTOP\\04_PRAT.lnk"
+
+    StrCpy $R0 "PRAT"
     Call ${un}regDelete
   ${Else}
     !insertmacro notifyOfUnknownVersion "PRAT" $R1

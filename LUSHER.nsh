@@ -10,8 +10,8 @@ Function LUSHER_INSTALL
   File /r "${SOURCE_PATH}\\LUSHER\"
   CreateShortcut \
       "$DESKTOP\\${LUSHER_LINK_NAME_1}.lnk" \
-      "$OUTDIR\\run.bat" \
-      "" \
+      "$OUTDIR\\LUSHER_START.exe" \
+      "-fullscreen" \
       "$OUTDIR\\Lusher1.ico"
 
   Push $R0
@@ -34,8 +34,13 @@ Function ${un}LUSHER_REMOVE
   Call ${un}regVersion
   Pop $R1
   ${If} $R1 == "1"
+    StrCpy $R0 "LUSHER_START.exe"
+    Call ${un}killProcess
+
     RMDIR /r "${ADMIN_PATH}\\LUSHER"
     Delete "$DESKTOP\\${LUSHER_LINK_NAME_1}.lnk"
+
+    StrCpy $R0 "LUSHER"
     Call ${un}regDelete
   ${Else}
     !insertmacro notifyOfUnknownVersion "LUSHER" $R1

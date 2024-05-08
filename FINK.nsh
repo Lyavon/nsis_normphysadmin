@@ -10,8 +10,8 @@ Function FINK_INSTALL
   File /r "${SOURCE_PATH}\\FINK\"
   CreateShortcut \
       "$DESKTOP\\16_FINK.lnk" \
-      "$OUTDIR\\run.bat" \
-      "" \
+      "$OUTDIR\\FINK_START.exe" \
+      "-fullscreen" \
       "$OUTDIR\\Ico_GIT.ico"
 
   Push $R0
@@ -34,8 +34,13 @@ Function ${un}FINK_REMOVE
   Call ${un}regVersion
   Pop $R1
   ${If} $R1 == "1"
+    StrCpy $R0 "FINK_START.exe"
+    Call ${un}killProcess
+
     RMDIR /r "${ADMIN_PATH}\\FINK"
     Delete "$DESKTOP\\16_FINK.lnk"
+
+    StrCpy $R0 "FINK"
     Call ${un}regDelete
   ${Else}
     !insertmacro notifyOfUnknownVersion "FINK" $R1

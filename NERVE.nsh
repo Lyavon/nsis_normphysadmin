@@ -10,8 +10,8 @@ Function NERVE_INSTALL
   File /r "${SOURCE_PATH}\\NERVE\"
   CreateShortcut \
       "$DESKTOP\\NERVE.lnk" \
-      "$OUTDIR\\run.bat" \
-      "" \
+      "$OUTDIR\\NERVE_START.exe" \
+      "-fullscreen" \
       ""
 
   Push $R0
@@ -34,8 +34,13 @@ Function ${un}NERVE_REMOVE
   Call ${un}regVersion
   Pop $R1
   ${If} $R1 == "1"
+    StrCpy $R0 "NERVE_START.exe"
+    Call ${un}killProcess
+
     RMDIR /r "${ADMIN_PATH}\\NERVE"
     Delete "$DESKTOP\\NERVE.lnk"
+
+    StrCpy $R0 "NERVE"
     Call ${un}regDelete
   ${Else}
     !insertmacro notifyOfUnknownVersion "NERVE" $R1
