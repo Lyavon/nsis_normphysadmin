@@ -38,4 +38,9 @@
 !define EyeTests_VERSION 1
 !define EyeTests_UI_NAME "05_EyeTests"
 
+
+!define FINK
+!define FINK_VERSION 1
+!define FINK_UI_NAME "16_FINK"
+
 !endif
