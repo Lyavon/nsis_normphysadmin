@@ -26,4 +26,8 @@
 !define NMJ_VERSION 1
 !define NMJ_UI_NAME "02_NMJ"
 
+!define TWITCH
+!define TWITCH_VERSION 1
+!define TWITCH_UI_NAME "03_TWITCH"
+
 !endif
