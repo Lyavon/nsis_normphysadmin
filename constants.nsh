@@ -42,6 +42,11 @@
 !define RabkinTables_VERSION 1
 
 
+!define Physiology
+!define Physiology_VERSION 1
+!define Physiology_UI_NAME "09_Physiology"
+
+
 !define FINK
 !define FINK_VERSION 1
 !define FINK_UI_NAME "16_FINK"
