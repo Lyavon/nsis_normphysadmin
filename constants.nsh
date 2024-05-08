@@ -38,6 +38,9 @@
 !define EyeTests_VERSION 1
 !define EyeTests_UI_NAME "05_EyeTests"
 
+!define RabkinTables
+!define RabkinTables_VERSION 1
+
 
 !define FINK
 !define FINK_VERSION 1
@@ -50,6 +53,10 @@
 
 !define KIDNEY_RUS
 !define KIDNEY_RUS_VERSION 1
+
+
+!define LUSHER
+!define LUSHER_VERSION 1
 
 
 !define BPRAT
