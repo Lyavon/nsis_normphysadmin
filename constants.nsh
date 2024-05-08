@@ -56,4 +56,8 @@
 !define BPRAT_VERSION 1
 !define BPRAT_UI_NAME "BPRAT"
 
+!define NERVE
+!define NERVE_VERSION 1
+!define NERVE_UI_NAME "NERVE"
+
 !endif
