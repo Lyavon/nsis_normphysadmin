@@ -51,4 +51,9 @@
 !define KIDNEY_RUS
 !define KIDNEY_RUS_VERSION 1
 
+
+!define BPRAT
+!define BPRAT_VERSION 1
+!define BPRAT_UI_NAME "BPRAT"
+
 !endif
