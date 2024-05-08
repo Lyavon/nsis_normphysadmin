@@ -34,4 +34,8 @@
 !define PRAT_VERSION 1
 !define PRAT_UI_NAME "04_PRAT"
 
+!define EyeTests
+!define EyeTests_VERSION 1
+!define EyeTests_UI_NAME "05_EyeTests"
+
 !endif
