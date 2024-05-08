@@ -66,6 +66,9 @@
 !define DEPARTMENT
 !define DEPARTMENT_VERSION 1
 
+!define HEALTH_WAY
+!define HEALTH_WAY_VERSION 1
+
 
 !define BPRAT
 !define BPRAT_VERSION 1
