@@ -43,4 +43,12 @@
 !define FINK_VERSION 1
 !define FINK_UI_NAME "16_FINK"
 
+
+!define KIDNEY_ENG
+!define KIDNEY_ENG_VERSION 1
+!define KIDNEY_ENG_UI_NAME "18_Kidney"
+
+!define KIDNEY_RUS
+!define KIDNEY_RUS_VERSION 1
+
 !endif
