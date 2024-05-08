@@ -10,8 +10,8 @@ Function PHYSIOL2_INSTALL
   File /r "${SOURCE_PATH}\\PHYSIOL2\"
   CreateShortcut \
       "$DESKTOP\\01_PHYSIOL2.lnk" \
-      "$OUTDIR\\run.bat" \
-      "" \
+      "$OUTDIR\\PHYSIOL2_START.exe" \
+      "-fullscreen" \
       "$OUTDIR\\Physiol2.ico"
 
   Push $R0
@@ -34,8 +34,13 @@ Function ${un}PHYSIOL2_REMOVE
   Call ${un}regVersion
   Pop $R1
   ${If} $R1 == "1"
+    StrCpy $R0 "PHYSIOL2_START.exe"
+    Call ${un}killProcess
+
     RMDIR /r "${ADMIN_PATH}\\PHYSIOL2"
     Delete "$DESKTOP\\01_PHYSIOL2.lnk"
+
+    StrCpy $R0 "PHYSIOL2"
     Call ${un}regDelete
   ${Else}
     !insertmacro notifyOfUnknownVersion "PHYSIOL2" $R1

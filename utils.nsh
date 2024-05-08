@@ -6,7 +6,6 @@
 !define UTILS_NSH
 
 !macro createInstallSection internalName
-
 Section ${internalName}
   Push $R0
   Push $R1
@@ -26,11 +25,9 @@ Section ${internalName}
   Pop $R1
   Pop $R0
 SectionEnd
-
 !macroend
 
 !macro createUninstallSection internalName
-
 Section un.${internalName}
   Push $R0
   Push $R1
@@ -45,7 +42,19 @@ Section un.${internalName}
   Pop $R1
   Pop $R0
 SectionEnd
-
 !macroend
+
+; Kill process by its name.
+;
+; Parameters: 
+; $R0 - Process name.
+!macro killProcess un
+Function ${un}killProcess
+  ExecWait '"C:\Windows\System32\taskkill.exe" /IM $R0 /F /T'
+  Sleep 300
+FunctionEnd
+!macroend
+!insertmacro killProcess ""
+!insertmacro killProcess "un."
 
 !endif
