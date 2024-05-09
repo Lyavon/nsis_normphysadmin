@@ -37,7 +37,8 @@ Function ${un}BPRAT_REMOVE
     StrCpy $R0 "BPRAT_START.exe"
     Call ${un}killProcess
 
-    RMDIR /r "${ADMIN_PATH}\\BPRAT"
+    StrCpy $R0 "${ADMIN_PATH}\\BPRAT"
+    Call ${un}removeDirectory
     Delete "$DESKTOP\\BPRAT.lnk"
 
     StrCpy $R0 "BPRAT"

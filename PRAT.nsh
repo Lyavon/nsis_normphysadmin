@@ -37,7 +37,8 @@ Function ${un}PRAT_REMOVE
     StrCpy $R0 "PRAT_START.exe"
     Call ${un}killProcess
 
-    RMDIR /r "${ADMIN_PATH}\\PRAT"
+    StrCpy $R0 "${ADMIN_PATH}\\PRAT"
+    Call ${un}removeDirectory
     Delete "$DESKTOP\\04_PRAT.lnk"
 
     StrCpy $R0 "PRAT"

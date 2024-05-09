@@ -37,7 +37,8 @@ Function ${un}NMJ_REMOVE
     StrCpy $R0 "NMJ_START.exe"
     Call ${un}killProcess
 
-    RMDIR /r "${ADMIN_PATH}\\NMJ"
+    StrCpy $R0 "${ADMIN_PATH}\\NMJ"
+    Call ${un}removeDirectory
     Delete "$DESKTOP\\02_NMJ.lnk"
 
     StrCpy $R0 "NMJ"

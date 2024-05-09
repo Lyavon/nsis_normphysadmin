@@ -37,7 +37,8 @@ Function ${un}NERVE_REMOVE
     StrCpy $R0 "NERVE_START.exe"
     Call ${un}killProcess
 
-    RMDIR /r "${ADMIN_PATH}\\NERVE"
+    StrCpy $R0 "${ADMIN_PATH}\\NERVE"
+    Call ${un}removeDirectory
     Delete "$DESKTOP\\NERVE.lnk"
 
     StrCpy $R0 "NERVE"

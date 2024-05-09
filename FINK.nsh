@@ -37,7 +37,8 @@ Function ${un}FINK_REMOVE
     StrCpy $R0 "FINK_START.exe"
     Call ${un}killProcess
 
-    RMDIR /r "${ADMIN_PATH}\\FINK"
+    StrCpy $R0 "${ADMIN_PATH}\\FINK"
+    Call ${un}removeDirectory
     Delete "$DESKTOP\\16_FINK.lnk"
 
     StrCpy $R0 "FINK"

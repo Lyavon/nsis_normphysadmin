@@ -34,8 +34,11 @@ Function ${un}HEALTH_WAY_REMOVE
   Call ${un}regVersion
   Pop $R1
   ${If} $R1 == "1"
-    RMDIR /r "${ADMIN_PATH}\\HEALTH_WAY"
+    StrCpy $R0 "${ADMIN_PATH}\\HEALTH_WAY"
+    Call ${un}removeDirectory
     Delete "$DESKTOP\\${HEALTH_WAY_LINK_NAME_1}.lnk"
+
+    StrCpy $R0 "HEALTH_WAY"
     Call ${un}regDelete
   ${Else}
     !insertmacro notifyOfUnknownVersion "HEALTH_WAY" $R1

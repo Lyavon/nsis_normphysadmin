@@ -38,16 +38,16 @@
 !define EYE_TESTS_VERSION 1
 !define EYE_TESTS_UI_NAME "05_EyeTests"
 
-!define RabkinTables
-!define RabkinTables_VERSION 1
+!define RABKIN_TABLES
+!define RABKIN_TABLES_VERSION 1
 
 
-!define Physiology
-!define Physiology_VERSION 1
-!define Physiology_UI_NAME "09_Physiology"
+!define PHYSIOLOGY
+!define PHYSIOLOGY_VERSION 1
+!define PHYSIOLOGY_UI_NAME "09_Physiology"
 
-!define BreathCycle
-!define BreathCycle_VERSION 1
+!define BREATH_CYCLE
+!define BREATH_CYCLE_VERSION 1
 
 
 !define FINK

@@ -37,7 +37,8 @@ Function ${un}TWITCH_REMOVE
     StrCpy $R0 "TWITCH_START.exe"
     Call ${un}killProcess
 
-    RMDIR /r "${ADMIN_PATH}\\TWITCH"
+    StrCpy $R0 "${ADMIN_PATH}\\TWITCH"
+    Call ${un}removeDirectory
     Delete "$DESKTOP\\03_TWITCH.lnk"
 
     StrCpy $R0 "TWITCH"

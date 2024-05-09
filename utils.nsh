@@ -57,4 +57,20 @@ FunctionEnd
 !insertmacro killProcess ""
 !insertmacro killProcess "un."
 
+; Delete recursively either now or on reboot.
+;
+; Parameters:
+; $R0 - Full path to directory.
+!macro removeDirectory un
+Function ${un}removeDirectory
+  ClearErrors
+  RMDir /r "$R0"
+  ${IF} ${Errors}
+    RMDir /r /REBOOTOK "$R0"
+  ${EndIf}
+FunctionEnd
+!macroend
+!insertmacro removeDirectory ""
+!insertmacro removeDirectory "un."
+
 !endif

@@ -34,8 +34,11 @@ Function ${un}DEPARTMENT_REMOVE
   Call ${un}regVersion
   Pop $R1
   ${If} $R1 == "1"
-    RMDIR /r "${ADMIN_PATH}\\DEPARTMENT"
+    StrCpy $R0 "${ADMIN_PATH}\\DEPARTMENT"
+    Call ${un}removeDirectory
     Delete "$DESKTOP\\${DEPARTMENT_LINK_NAME_1}.lnk"
+
+    StrCpy $R0 "DEPARTMENT"
     Call ${un}regDelete
   ${Else}
     !insertmacro notifyOfUnknownVersion "DEPARTMENT" $R1

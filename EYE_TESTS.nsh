@@ -37,7 +37,8 @@ Function ${un}EYE_TESTS_REMOVE
     StrCpy $R0 "EYE_TESTS_START.exe"
     Call ${un}killProcess
 
-    RMDIR /r "${ADMIN_PATH}\\EYE_TESTS"
+    StrCpy $R0 "${ADMIN_PATH}\\EYE_TESTS"
+    Call ${un}removeDirectory
     Delete "$DESKTOP\\05_EyeTests.lnk"
 
     StrCpy $R0 "EYE_TESTS"

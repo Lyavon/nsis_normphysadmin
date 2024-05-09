@@ -37,7 +37,8 @@ Function ${un}LUSHER_REMOVE
     StrCpy $R0 "LUSHER_START.exe"
     Call ${un}killProcess
 
-    RMDIR /r "${ADMIN_PATH}\\LUSHER"
+    StrCpy $R0 "${ADMIN_PATH}\\LUSHER"
+    Call ${un}removeDirectory
     Delete "$DESKTOP\\${LUSHER_LINK_NAME_1}.lnk"
 
     StrCpy $R0 "LUSHER"

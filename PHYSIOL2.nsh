@@ -37,7 +37,8 @@ Function ${un}PHYSIOL2_REMOVE
     StrCpy $R0 "PHYSIOL2_START.exe"
     Call ${un}killProcess
 
-    RMDIR /r "${ADMIN_PATH}\\PHYSIOL2"
+    StrCpy $R0 "${ADMIN_PATH}\\PHYSIOL2"
+    Call ${un}removeDirectory
     Delete "$DESKTOP\\01_PHYSIOL2.lnk"
 
     StrCpy $R0 "PHYSIOL2"
