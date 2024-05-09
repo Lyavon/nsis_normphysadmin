@@ -86,6 +86,10 @@
 !define HEALTH_WAY
 !define HEALTH_WAY_VERSION 1
 
+!define SPO2
+!define SPO2_VERSION 1
+!define SPO2_UI_NAME "28_SpO2_Assistant"
+
 
 !define SOUNDS_HZ
 !define SOUNDS_HZ_VERSION 1
