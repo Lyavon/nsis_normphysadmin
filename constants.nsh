@@ -61,6 +61,9 @@
 !define FINK_VERSION 1
 !define FINK_UI_NAME "16_FINK"
 
+!define INUTRITION
+!define INUTRITION_VERSION 1
+!define INUTRITION_UI_NAME "17_iNutrition"
 
 !define KIDNEY_ENG
 !define KIDNEY_ENG_VERSION 1
