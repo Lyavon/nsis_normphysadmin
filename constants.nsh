@@ -50,6 +50,13 @@
 !define BREATH_CYCLE_VERSION 1
 
 
+!define HCT_ENG
+!define HCT_ENG_VERSION 1
+!define HCT_ENG_UI_NAME "12_Hematocrit"
+
+!define HCT_RUS
+!define HCT_RUS_VERSION 1
+
 !define FINK
 !define FINK_VERSION 1
 !define FINK_UI_NAME "16_FINK"
