@@ -87,6 +87,15 @@
 !define HEALTH_WAY_VERSION 1
 
 
+!define SOUNDS_HZ
+!define SOUNDS_HZ_VERSION 1
+!define SOUNDS_HZ_UI_NAME "SoundsHz"
+
+!define SHEFFIELD
+!define SHEFFIELD_VERSION 1
+!define SHEFFIELD_UI_NAME "Sheffield_Biosciences"
+
+
 !define BPRAT
 !define BPRAT_VERSION 1
 !define BPRAT_UI_NAME "BPRAT"
