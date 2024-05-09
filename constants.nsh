@@ -41,6 +41,10 @@
 !define RABKIN_TABLES
 !define RABKIN_TABLES_VERSION 1
 
+!define HEARTSND
+!define HEARTSND_VERSION 1
+!define HEARTSND_UI_NAME "07_Heart_Sounds"
+
 
 !define PHYSIOLOGY
 !define PHYSIOLOGY_VERSION 1
