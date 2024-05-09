@@ -108,4 +108,8 @@
 !define NERVE_VERSION 1
 !define NERVE_UI_NAME "NERVE"
 
+!define MECINHEM
+!define MECINHEM_VERSION 1
+!define MECINHEM_UI_NAME "Mechanisms_in_Hematology"
+
 !endif
