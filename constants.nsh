@@ -61,6 +61,10 @@
 !define HCT_RUS
 !define HCT_RUS_VERSION 1
 
+!define PHYSIO_EX
+!define PHYSIO_EX_VERSION 1
+!define PHYSIO_EX_UI_NAME "14_PhysioEx"
+
 !define FINK
 !define FINK_VERSION 1
 !define FINK_UI_NAME "16_FINK"
