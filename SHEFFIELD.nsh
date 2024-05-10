@@ -8,7 +8,7 @@
 Function SHEFFIELD_INSTALL
   SetOutPath "$DESKTOP\\Sheffield_Biosciences"
   SetOutPath "${ADMIN_PATH}\\SHEFFIELD"
-  File /r ".\\soft\\SHEFFIELD\"
+  File /r "${SOURCE_PATH}\\SHEFFIELD\"
   CreateShortcut \
       "$DESKTOP\\Sheffield_Biosciences\\Autonomic_Pharmacology.lnk" \
       "$OUTDIR\\Autonomic_Pharmacology\\click_me.exe"

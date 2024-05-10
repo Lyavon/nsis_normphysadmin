@@ -7,7 +7,7 @@
 
 Function HAEMODYNAMICS_INSTALL
   SetOutPath "${ADMIN_PATH}\\HAEMODYNAMICS"
-  File /r ".\\soft\\HAEMODYNAMICS\"
+  File /r "${SOURCE_PATH}\\HAEMODYNAMICS\"
   CreateShortcut \
       "$SMSTARTUP\\HAEMODYNAMICS.lnk" \
       "$OUTDIR\\HAEMODYNAMICS_START.exe"

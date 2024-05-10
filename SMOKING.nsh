@@ -7,7 +7,7 @@
 
 Function SMOKING_INSTALL
   SetOutPath "${ADMIN_PATH}\\SMOKING"
-  File /r ".\\soft\\SMOKING\"
+  File /r "${SOURCE_PATH}\\SMOKING\"
   CreateShortcut \
       "$SMSTARTUP\\SMOKING.lnk" \
       "$OUTDIR\\SMOKING_START.exe"

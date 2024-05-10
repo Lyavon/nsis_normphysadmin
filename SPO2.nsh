@@ -10,12 +10,12 @@ Function SPO2_INSTALL
   Push $R1
 
   SetOutPath "$TEMP"
-  File ".\\soft\\SPO2\\vcredist_x86.exe"
+  File "${SOURCE_PATH}\\SPO2\\vcredist_x86.exe"
   ExecWait '"$TEMP\\vcredist_x86.exe" /Q'
   Delete "$TEMP\\vcredist_x86"
 
   SetOutPath "$TEMP\\VCP"
-  File /r ".\\soft\\SPO2\\CP210x_VCP\"
+  File /r "${SOURCE_PATH}\\SPO2\\CP210x_VCP\"
   ExecWait "installslabvcp.bat"
   SetOutPath "$TEMP"
   StrCpy $R0 "$TEMP\\VCP"
@@ -55,7 +55,7 @@ Function ${un}SPO2_REMOVE
     ExecWait 'regSvr32 /u "${ADMIN_PATH}\\SPO2\\50KReview\\Step\\MSCHRT20.OCX"'
 
     SetOutPath "$TEMP"
-    File ".\\soft\\SPO2\\CP210x_VCP\\deleteslabvcp.bat"
+    File "${SOURCE_PATH}\\SPO2\\CP210x_VCP\\deleteslabvcp.bat"
     ExecWait "$OUTDIR\\deleteslabvcp.bat"
     Delete "$OUTDIR\\deleteslabvcp.bat"
 

@@ -7,7 +7,7 @@
 
 Function NOZDRACHEV_INSTALL
   SetOutPath "${ADMIN_PATH}\\NOZDRACHEV"
-  File /r ".\\soft\\NOZDRACHEV\"
+  File /r "${SOURCE_PATH}\\NOZDRACHEV\"
   CreateShortcut \
       "$SMSTARTUP\\NOZDRACHEV.lnk" \
       "$OUTDIR\\NOZDRACHEV_START.exe"

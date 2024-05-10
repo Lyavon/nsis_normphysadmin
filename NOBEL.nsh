@@ -7,7 +7,7 @@
 
 Function NOBEL_INSTALL
   SetOutPath "${ADMIN_PATH}\\NOBEL"
-  File /r ".\\soft\\NOBEL\"
+  File /r "${SOURCE_PATH}\\NOBEL\"
   CreateShortcut \
       "$SMSTARTUP\\NOBEL.lnk" \
       "$OUTDIR\\NOBEL_START.exe"
