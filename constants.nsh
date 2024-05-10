@@ -45,6 +45,10 @@
 !define HEARTSND_VERSION 1
 !define HEARTSND_UI_NAME "07_Heart_Sounds"
 
+!define 12LEAD
+!define 12LEAD_VERSION 1
+!define 12LEAD_UI_NAME "08_12Lead"
+
 
 !define PHYSIOLOGY
 !define PHYSIOLOGY_VERSION 1
