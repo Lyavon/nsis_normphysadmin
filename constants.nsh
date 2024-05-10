@@ -104,6 +104,12 @@
 !define SHEFFIELD_UI_NAME "Sheffield_Biosciences"
 
 
+!define NOBEL
+!define NOBEL_VERSION 1
+
+!define SMOKING
+!define SMOKING_VERSION 1
+
 !define BPRAT
 !define BPRAT_VERSION 1
 !define BPRAT_UI_NAME "BPRAT"
